@@ -20,3 +20,13 @@ class Calculator:
         """ subtract number from result"""
         self.result = self.result - value_a
         return self.result
+
+    def multiply_number(self, value_a):
+        """multiplys number by value_a"""
+        self.result = self.result * value_a
+        return self.result
+
+    def divide_number(self, value_a):
+        """divides number by value_a"""
+        self.result = self.result / value_a
+        return self.result
