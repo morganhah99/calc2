@@ -1,13 +1,8 @@
-""" This is the increment function"""
-
-
-def inc(x_value):
-    """ Increment Function adds one to the x_value"""
-    return x_value + 1
+"""this is the calculator class"""
 
 
 class Calculator:
-    """ This is the Calculator class"""
+    """ methods of calculator"""
 
     result = 0
 

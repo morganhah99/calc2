@@ -9,10 +9,8 @@ def test_calculator_divide():
     calc = Calculator()
 
     # act
-    try:
-        calc.divide_number(1)
-    except ZeroDivisionError:
-        calc.get_result()
+    calc.add_number(2)
+    calc.divide_number(2)
 
     # assert
-    assert calc.get_result() == 0
+    assert calc.get_result() == 1
