@@ -1,18 +1,15 @@
 """testing division function"""
-from calculator.main import Calculator
+from calc.operations.division import Division
 
 
 def test_calculator_divide():
-    """testing the divide method of the calculator"""
+    """testing the divide method of the calc"""
 
     # arrange
-    calc = Calculator()
+    division = Division(4, 2)
 
     # act
-    try:
-        calc.divide_number(1)
-    except ZeroDivisionError:
-        calc.get_result()
+    result = division.getresult()
 
     # assert
-    assert calc.get_result() == 0
+    assert result == 2

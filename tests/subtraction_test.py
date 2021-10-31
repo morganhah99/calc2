@@ -1,11 +1,11 @@
 """Testing subtraction function"""
-from calculator.main import Calculator
+from calc.operations.subtraction import Subtraction
 
 
 def test_calculator_subtract():
-    """Testing the subtract method of the calculator"""
-    calc = Calculator()
+    """Testing the subtract method of the calc"""
+    subtraction = Subtraction(1, 2)
 
-    calc.subtract_number(1)
+    result = subtraction.getresult()
 
-    assert calc.get_result() == -1
+    assert result == -1

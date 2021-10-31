@@ -1,11 +1,7 @@
-"""Testing multiplication function"""
-from calculator.main import Calculator
+"""Testing addition function"""
+from calc.operations.multiplication import Multiplication
 
 
-def test_calculator_multiply():
-    """Testing the multiply method of the calculator"""
-    calc = Calculator()
-
-    calc.multiply_number(1)
-
-    assert calc.get_result() == 0
+def test_multiplication():
+    """Testing addition method of the calc"""
+    assert Multiplication.multiply(1, 2) == 2
