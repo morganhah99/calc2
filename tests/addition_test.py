@@ -9,9 +9,9 @@ def test_addition():
     addition = Addition(1, 2)
 
     # Act
-    result = addition.getResult()
+    result = addition.getresult()
 
     # Assert
     assert result == 3
 
-# or just assert addition.getResult() == 3
+# or just assert Addition.getResult() == 3

@@ -1,3 +1,4 @@
+"""Class for the Calculator object that contains all the methods"""
 from calc.operations.addition import Addition
 from calc.operations.multiplication import Multiplication
 from calc.operations.subtraction import Subtraction
@@ -8,6 +9,7 @@ class Calculator:
     """ This is the Calculator class"""
 
     history = []
+    result = 0
 
     def get_result(self):
         """ Get Result of Calculation"""
@@ -18,19 +20,25 @@ class Calculator:
         """ adds number to result and appends to history list"""
         addition = Addition(value_a, value_b)
         Calculator.history.append(addition)
-        return Addition.add(value_a, value_b)
+        return addition.getresult
 
     @staticmethod
     def multiply_number(value_a, value_b):
         """multiply number to result"""
-        return Multiplication.multiply(value_a, value_b)
+        multiplication = Multiplication(value_a, value_b)
+        Calculator.history.append(multiplication)
+        return Multiplication.getresult
 
     @staticmethod
     def divide_number(value_a, value_b):
         """divides number to result"""
-        return Division.divide(value_a, value_b)
+        division = Division(value_a, value_b)
+        Calculator.history.append(division)
+        return division.getresult
 
     @staticmethod
     def subtract_number(value_a, value_b):
         """ subtract number from result"""
-        return Subtraction.subtract(value_a, value_b)
+        subtraction = Subtraction(value_a, value_b)
+        Calculator.history.append(subtraction)
+        return Subtraction.getresult
