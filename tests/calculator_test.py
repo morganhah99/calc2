@@ -22,8 +22,7 @@ def test_calculator_get_result():
     assert result == 3
 
 
-def test_calculator_history_getAdditionCalc():
+def test_calculator_history_getadditioncalc():
     """ tests to see if you can get an individual history result"""
     calculation = Calculator.history[0]
-    assert calculation.getresult() == 3
-
+    assert calculation.get_result() == 3
