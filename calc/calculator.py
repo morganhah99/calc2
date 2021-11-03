@@ -18,7 +18,7 @@ class Calculator:
     @staticmethod
     def add_number(value_a, value_b):
         """ adds number to result and appends to history list"""
-        addition = Addition(value_a, value_b)
+        addition = Addition.create(value_a, value_b)
         Calculator.history.append(addition)
         return addition.getresult
 
