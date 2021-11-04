@@ -5,14 +5,14 @@ from calc.calculator import Calculator
 def test_calculator_result():
     """testing calc result is 0"""
     calc = Calculator()
-    assert calc.get_result == 0
+    assert calc.add_number(1, 2) == 3
 
 
 def test_calculator_history_static_property():
     """testing the history function of the calculator"""
     calc = Calculator()
     calc.add_number(1, 2)
-    assert len(Calculator.history) == 1
+    assert len(calc.history) == 2
 
 
 def test_calculator_get_result():
@@ -22,7 +22,8 @@ def test_calculator_get_result():
     assert result == 3
 
 
-def test_calculator_history_getadditioncalc():
-    """ tests to see if you can get an individual history result"""
-    calculation = Calculator.history[0]
-    assert calculation.get_result() == 3
+def test_calculator_history_get_calc():
+    """ test to see if get_last_calculator_result works"""
+    calc = Calculator()
+    result = calc.add_number(2, 4)
+    assert result.get_last_calculator_result == 6
