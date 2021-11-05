@@ -1,15 +1,15 @@
 """testing division function"""
-from calc.operations.division import Division
+from calc.calculations.division import Division
 
 
 def test_calculator_divide():
     """testing the divide method of the calc"""
 
     # arrange
-    division = Division(4, 2)
+    my_numbers = (1.0, 2.0)
 
     # act
-    result = division.getresult()
+    division = Division(my_numbers)
 
     # assert
-    assert result == 2
+    assert division.get_result() == 2.0
