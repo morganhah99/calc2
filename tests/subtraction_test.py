@@ -9,4 +9,4 @@ def test_calculation_subtraction():
     subtraction = Subtraction(my_numbers)
     # Act
     # Assert
-    assert subtraction.get_result() == -3
+    assert subtraction.compute() == -3

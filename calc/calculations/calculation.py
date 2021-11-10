@@ -1,4 +1,5 @@
 """Calculation Class"""
+from abc import ABC, abstractmethod
 
 
 class Calculation:
@@ -26,3 +27,12 @@ class Calculation:
         for item in values:
             list_values_float.append(float(item))
         return tuple(list_values_float)
+
+
+class Computation(ABC):
+    """ abstract base class for the operations"""
+    @abstractmethod
+    # pylint: disable=missing-function-docstring
+    def compute(self):
+        pass
+

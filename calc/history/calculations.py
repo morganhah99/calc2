@@ -29,7 +29,7 @@ class Calculations:
     def get_last_calculation_result_value():
         """get last calculation"""
         calculation = Calculations.get_last_calculation_object()
-        return calculation.get_result()
+        return calculation.compute()
 
     @staticmethod
     def get_first_calculation():

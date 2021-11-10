@@ -7,4 +7,4 @@ def test_multiplication():
 
     my_numbers = (1.0, 2.0)
     multiplication = Multiplication(my_numbers)
-    assert multiplication.get_result() == 2.0
+    assert multiplication.compute() == 2.0
