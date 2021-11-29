@@ -1,19 +1,34 @@
 """Calculation Class"""
-from abc import ABC, abstractmethod
+from abc import ABC
+from calc.calculations.addition import Addition
+from calc.calculations.subtraction import Subtraction
+from calc.calculations.division import Division
+from calc.calculations.multiplication import Multiplication
 
 
-class Calculation:
+class Calculation(ABC):
     """ calculation abstract base class"""
 
     # pylint: disable=too-few-public-methods
-    def __init__(self, values: tuple):
+    def __init__(self, values: tuple, op):
         """ constructor method"""
+        self.op = op
         self.values = Calculation.convert_args_to_tuple_of_float(values)
 
     @classmethod
-    def create(cls, values: tuple):
+    def create(cls, values: tuple, op):
         """ factory method"""
-        return cls(values)
+        if op == 'add':
+            return cls(Addition.create(values))
+
+        elif op == 'subtract':
+            return cls(Subtraction.create(values))
+
+        elif op == 'multiply':
+            return cls(Multiplication.create(values))
+
+        elif op == 'divide':
+            return cls(Division.create(values))
 
     @staticmethod
     def convert_args_to_tuple_of_float(values):
@@ -29,10 +44,4 @@ class Calculation:
         return tuple(list_values_float)
 
 
-class Computation(ABC):
-    """ abstract base class for the operations"""
-    @abstractmethod
-    # pylint: disable=missing-function-docstring
-    def compute(self):
-        pass
 

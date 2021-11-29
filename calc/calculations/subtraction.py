@@ -6,6 +6,8 @@ from calc.calculations.calculation import Calculation
 
 class Subtraction(Calculation):
     """subtraction calculation object"""
+    op = 'subtract'
+
     def compute(self):
         """get the subtraction results"""
         difference_of_values = 0.0

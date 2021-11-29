@@ -1,7 +1,7 @@
 """Testing the Calculator"""
 import pytest
 from calc.history.calculations import Calculations
-from calc.calculations.addition import Addition
+from calc.calculations.calculation import Addition
 
 
 @pytest.fixture
@@ -18,6 +18,13 @@ def setup_addition_calculation_fixture():
     values = (1, 2)
     addition = Addition(values)
     Calculations.add_calculation(addition)
+
+
+def test_add_addition_calculation():
+    values = (2, 2)
+    calculation = Calculation(values, 'add')
+    calculation.create(values, 'add')
+    assert calculation.create(values, 'add') == 4
 
 
 def test_add_calculation_to_history(clear_history_fixture, setup_addition_calculation_fixture):
@@ -64,3 +71,4 @@ def test_get_calc_last_result_object(clear_history_fixture, setup_addition_calcu
     # pylint: disable=unused-argument,redefined-outer-name
     # This test if it returns the last calculation as an object
     assert isinstance(Calculations.get_last_calculation_object(), Addition)
+

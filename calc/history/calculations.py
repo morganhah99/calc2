@@ -1,7 +1,7 @@
 """Calculation history Class"""
-from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
+from calc.calculations.calculation import Calculation
 
 
 class Calculations:
@@ -49,7 +49,7 @@ class Calculations:
     @staticmethod
     def add_addition_calculation(values):
         """create an addition and add object to history using factory method create"""
-        Calculations.add_calculation(Addition.create(values))
+        Calculations.add_calculation(Calculation.create(values))
         # Get the result of the calculation
         return True
 

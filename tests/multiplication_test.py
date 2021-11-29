@@ -1,9 +1,9 @@
-"""Testing addition function"""
+"""Testing Multiplication function"""
 from calc.calculations.multiplication import Multiplication
 
 
 def test_multiplication():
-    """Testing addition method of the calc"""
+    """Testing multiplication method of the calc"""
 
     my_numbers = (1.0, 2.0)
     multiplication = Multiplication(my_numbers)

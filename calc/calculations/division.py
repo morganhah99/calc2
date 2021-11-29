@@ -5,6 +5,8 @@ from calc.calculations.calculation import Calculation
 
 class Division(Calculation):
     """ calculation division class"""
+    op = 'divide'
+
     def compute(self):
         """ gets the division results"""
         dividend_of_values = 1.0
