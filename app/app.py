@@ -1,13 +1,15 @@
 """A simple flask web app"""
 from flask import Flask, request
 from flask import render_template
+from flask import flash
 from calc.calculator import Calculator
 app = Flask(__name__)
 
 @app.route("/")
 def index():
     """index  Route Response"""
-    return render_template('index.html')
+    flash("hi")
+    return render_template('home.html')
 
 @app.route("/basicform", methods=['GET', 'POST'])
 def basicform():
