@@ -1,1 +1,1 @@
-![alt text](https://github.com/[morganhah99]/[calc2]/blob/[webCalc-Part1]/app/static/images/flashval.png)
+![flashval](https://user-images.githubusercontent.com/77805833/145307472-d993a0a7-861d-4cbe-9f33-d8671112d561.png)
