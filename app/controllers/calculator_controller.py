@@ -46,7 +46,9 @@ class CalculatorController(ControllerBase):
 
     @staticmethod
     def writeCSVToHistory():
-        
+        data = Calculations.history
+        for row in data:
+
 
     """
     The easy calculator solution
