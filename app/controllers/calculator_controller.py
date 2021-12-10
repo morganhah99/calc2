@@ -51,6 +51,8 @@ class CalculatorController(ControllerBase):
 
 
     """
+    maybe move both the csv methods to the calcuations file 
+    
     The easy calculator solution
     1.  fix your calculator to read and write calculations to the csv
     2.  fix the controller to read the the csv to history first

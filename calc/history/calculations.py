@@ -2,6 +2,7 @@
 from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
+from calc.calculator import Calculator
 class Calculations:
     """Calculations class manages the history of calculations"""
     history = []
@@ -13,6 +14,19 @@ class Calculations:
         """clear the history of calculations"""
         Calculations.history.clear()
         return True
+
+    @staticmethod
+    def readCSVToHistory():
+        """ reads csv into history"""
+        data = Calculator.getHistoryFromCSV()
+        for row in data:
+            Calculations.history.append(row)
+
+    @staticmethod
+    def writeCSVToHistory():
+        data = Calculations.history
+        for row in data:
+
     @staticmethod
     def count_history():
         """get number of items in history"""
