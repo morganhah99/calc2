@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Glossary{% endblock %}
+{% block head %}
+	{{super()}}
+	<style type="text/css">
+h1 {
+	padding-left: 50px;
+}
+.bar a {
+	color: white;
+	text-decoration: none;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 20px;
+}
+.bar a:hover {
+	background-color: green;
+	color: white;
+}
+</style>
+{% endblock %}
+<html lang="en">
+	<head>
+		<title>OOP Glossary</title>
+		<!-- Required meta tags -->
+    		<meta charset="utf-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+{% block content %}
+	<body>
+		<div class="content">
+			<h1 style="text-align:center">OOP Terminology</h1>
+			<ul>
+				<li>Factory</li>
+				<pre class="command">Factory is an object for creating other objects - formally a factory is a function or method that returns objects of a varying prototype or class</pre>
+				<li>Instantiation</li>
+				<pre class="command">Instantiating a class is creating a copy of the class which inherits all class variables and methods</pre>
+				<li>Object</li>
+				<pre class="command">An object is a real-life entity. An object is the collection of various data and functions that operate on those data. An object contains the following properties:</pre>
+				<ul>
+					<li><b>State</b> - The attributes of an object represents its state. It also reflects the properties of an object.</li>
+					<li><b>Behavior</b> - The method of an object represents its behavior</li>
+					<li><b>Identity</b> - Each object must be uniquely identified and allow interacting with the other objects</li>
+				</ul>
+				<br>
+				<li>Namespace</li>
+				<pre class="command">A namespace is a system that has a unique name for each and every object in Python. Python itself maintains a namespace in the form of a Python dictionary</pre>
+				<li>Constructor</li>
+				<pre class="command">Constructors are gernally used for instantiating an object. The task of constructors is to initialize (assign values) to the data members of the class when an object is created</pre>
+				<li>Fixture</li>
+				<pre class="command">Fixtures are functions, which will run before each test function to which it is applied. Fixtures are used to feed some data to the tests such as database connections.</pre>
+				<li>Type Hint</li>
+				<pre class="command">Type hinting is a formal solution to statically indicate the type of a value within your Python code</pre> 
+				<li>Type Cast</li>
+				<pre class="command">The process of converting the value of one data type (integer, string, float) to another data type</pre>
+				<li>Unit Test</li>
+				<pre class="command">A unit test is a small test that checks that a single component operates in the right way. A unit test helps you to isolate what is broken in your application and fix it faster</pre>
+				<li>Static</li>
+				<pre class="command">Static means, that the member is on a class level rather than on the instance level. Static variables aren't instantiated. If you change a static variable in one instance of the class, the change will affect its value 					in all other instances</pre>
+				<li>Class Method</li>
+				<pre class="command">The classmethod() is a builtin function in Python, which returns a class method for a given function.</pre>
+				<li>Facade</li>
+				<pre class="command">Facade is a structural design pattern that provides a simplified (but limited) interface to a complex system of classes, library, or framework.</pre>
+				<li>Creational Design Pattern</li>
+				<pre class="command">Creational patterns provides essential information regarding the Class instantiation or the object instantiation. Examples of Creational patterns:</pre>
+				<ul>
+					<li>Factory Method</li>
+					<li>Abstract Factory Method</li>
+					<li>Builder Method</li>
+					<li>Prototype Method</li>
+					<li>Singleton Method</li>
+				</ul>
+				<li>Structural Design Patterns</li>
+				<pre class="command">Structural design patterns are about organizing different classes and objects to form larger structures and provide new functionality while keeping these structures flexible and efficient. They mostly use inheritance to compose all the interfaces. Examples:</pre>
+				<ul>
+					<li>Adapter Method</li>
+					<li>Bridge Method</li>
+					<li>Composite Method</li>
+					<li>Decorator Method</li>
+					<li>Facade Method</li>
+				</ul>
+				<li>Behavioral Design Pattern</li>
+				<pre class="command">Behavioral patterns are all about identifying the common communication patterns between objects and realize these patterns. These patterns are concerned with algorithms and the assignment of responsibilites between objets. Examples:</pre>
+				<ul>
+					<li>Chain of responsibility method</li>
+					<li>Command method</li>
+					<li>Iterator method</li>
+					<li>Mediator method</li>
+				</ul>
+				<li>Method</li>
+				<pre class="command">A method in Python is somewhat similar to a function, except it is associated with objects/classes. Methods are implicitly used for an object for which it is called. They also are accessible to data that is contained within the class.</pre>
+				<li>Property</li>
+				<pre class="command">The property function is used to define properties in a Python class. It provides an interface to instance attributes and encapsulates them and provides a property. The method takes the get, set, and delete methods as arguments and returns an object of the property class</pre>
+			</ul>
+			</div>
+	</body>
+{% endblock %}

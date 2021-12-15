@@ -1,0 +1,47 @@
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+body {
+}
+
+h1 {
+	padding-left: 50px;
+}
+.bar a {	
+	color: white;
+	text-decoration: none;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 20px;
+}
+.bar a:hover {
+	background-color: green;
+	color: white;
+}
+.bar {
+	background-color: black;
+}
+.content {
+	margin-left: 150px;
+	margin-right: 150px;
+	background-color: white;
+}
+
+.command {
+	color: black;
+	background-color: lightgray;
+	border-color: gray; 
+	border-style: solid;
+	border-width: 2px;
+	padding: 10px;
+}
+.output {
+	color: white;
+	background-color: gray;
+	border-color: black;
+	border-style: solid;
+	border-width: 2px;
+	padding: 10px;
+}
+

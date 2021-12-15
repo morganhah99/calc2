@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Azure{% endblock %}
+{% block head %}
+	{{super()}}
+	<style type="text/css">
+		.bar a {
+	color: white;
+	text-decoration: none;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 20px;
+}
+.bar a:hover {
+	background-color: green;
+	color: white;
+}
+.bar {
+	background-color: black;
+.content {
+	margin-left: 150px;
+	margin-right: 150px;
+	background-color: white;
+}
+
+.command {
+	color: black;
+	background-color: lightgray;
+	border-color: gray;
+	border-style: solid;
+	border-width: 2px;
+	padding: 10px;
+}
+</style>
+{% endblock %}
+<html lang="en">
+	<head>
+		<title> Azure </title>
+		<!-- Required meta tags -->
+    		<meta charset="utf-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+{% block content %}
+	<body>
+		<div class="content">
+			<h2> Azure </h2>
+			<p> Azure is a cloud computing service created by Microsoft. Microsoft's data centers run Azure. </p>
+			<h4> Create Azure Account </h4>
+			<ol>
+				<li> Get the <a href="https://azure.microsoft.com/en-us/free/students/">student edition of Azure </a> </li>
+				<li> Click the "start free" button. </li>
+				<li> Login to your student account or create microsoft student account using your college student email. </li>
+				<li> Go to <a href="https://azure.microsoft.com/en-us/"> Microsoft's Azure website </a> </li>
+				<li> Click the profile icon at the top right corner then click on the "Azure Portal" link </li>
+				<p> You should be at the Azure Portal. </p>
+			</ol>
+			<h4> Docker Azure Commands </h4>
+			<ul>
+				<li> To log in to Azure for docker </li>
+				<pre class="command"> $ docker login azure </pre>
+				<li> To create the docker context for Azure </li>
+				<pre class="command"> $ docker context create aci context-name </pre>
+				<li> Switch to the Azure context that was created: </li>
+				<pre class="command"> $ docker context use context-name </pre>
+				<li> To release the resources of unused containers, networks, and imagaes while in the Azure context: </li>
+				<pre class="command"> $ docker prune </pre>
+			</ul>
+			</div>
+	</body>
+{% endblock %}
