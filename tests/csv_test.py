@@ -8,7 +8,7 @@ import pandas as pd
 def test_write_csv():
     """testing that our calculator has a static method for addition"""
     #Arrange
-    filename = 'csv_output.csv'
+    filename = 'addition.csv'
     path = 'tests/test_data'
     fullPath = path + '/' + filename
     name_dict = {
@@ -27,7 +27,7 @@ def test_write_csv():
 def test_read_csv():
     """testing that our calculator has a static method for addition"""
     #Arrange
-    filename = 'csv_output.csv'
+    filename = 'addition.csv'
     path = 'tests/test_data'
     fullPath = path + '/' + filename
     #Act

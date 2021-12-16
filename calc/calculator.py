@@ -1,5 +1,7 @@
 """ This is the increment function"""
 from calc.history.calculations import Calculations
+from csvmanager.read import Read
+from csvmanager.write import Write
 
 #the calculator class just contains the methods to calculate
 class Calculator:
@@ -26,17 +28,24 @@ class Calculator:
         """ multiplication number from result"""
         Calculations.add_multiplication_calculation_to_history(tuple_values)
         return True
+
+    @staticmethod
+    def division(tuple_values: tuple):
+        Calculations.add_division_calculation_to_history(tuple_values)
+
     @staticmethod
     def getHistory():
         """ Get history """
         return Calculations.history
+"""
+    @staticmethod
+    def getHistoryFromCSV():
+         reads calculations from the csv
+        return Read.DataFrameFromCSVFile('history/history.csv')
 
     @staticmethod
-    def getHistoryFromCSV(filename):
-        """ reads calculations from the csv"""
-        return Read.DataFrameFromCSVFile(filename)
+    def writeHistoryToCSV():
+         writes calculations to csv
+        return Write.DataFrameToCSVFile('history/history.csv',df)
+"""
 
-    @staticmethod
-    def writeHistoryToCSV(filename):
-        """ writes calculations to the csv"""
-        return Write.DataFrameToCSVFile(filename)

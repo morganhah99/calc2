@@ -3,10 +3,10 @@ from calc.calculations.calculation import Calculation
 
 
 class Division(Calculation):
-    """subtraction calculation object"""
+    """ calculation division class"""
     def get_result(self):
-        """get the multiplication results"""
-        result = 1.0
+        """ gets the division results"""
+        dividend_of_values = 1.0
         for value in self.values:
-            result = result * value
-        return result
+            dividend_of_values = value / dividend_of_values
+        return dividend_of_values
